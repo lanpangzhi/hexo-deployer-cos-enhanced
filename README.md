@@ -1,4 +1,7 @@
-# hexo-deployer-cos-enhanced
+# hexo-deployer-cos-enhanced-dev
+本项目是在[https://github.com/75k/hexo-deployer-cos-enhanced](https://github.com/75k/hexo-deployer-cos-enhanced)上面增加 自动获取环境变量设置 secretKey secretKey字段。 
+
+## （重点）`secretId`  `secretKey` 包括cdnConfig下面这两个字段都可以不用填写， 直接从环境变量取
 
 Hexo静态博客部署到腾讯云对象存储服务的插件，部署完成后会自动刷新被更新文件的CDN缓存。同时支持图片文件上传到单独对象存储中。
 
@@ -27,13 +30,9 @@ Hexo静态博客部署到腾讯云对象存储服务的插件，部署完成后�
 
 ``` bash
 #稳定版
-npm install hexo-deployer-cos-enhanced --save
+npm install hexo-deployer-cos-enhanced-dev --save
 ```
 
-``` bash
-#开发版
-npm install https://github.com/75k/hexo-deployer-cos-enhanced.git --save
-```
 
 ## 配置
 
@@ -54,6 +53,8 @@ deploy:
       secretId: AKIDIgxxxxxxxxxxxxxxxxxxxx0SepjX
       secretKey: qXPCbxxxxxxxxxxxxxxxxxxxxsJZfdR
 ```
+`secretId`  `secretKey` 包括cdnConfig下面这两个字段都可以不用填写， 直接从环境变量取
+
 
 `type`： 是固定死的，只能是 cos。
 
